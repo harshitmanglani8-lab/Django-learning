@@ -9,3 +9,7 @@ def home(request,pk):
 def about(request,rm):
     data=rm
     return render(request,'about.html',{'key':data})
+
+def services(request,xy):
+    data=xy
+    return render(request,'services.html',{'key':data})
