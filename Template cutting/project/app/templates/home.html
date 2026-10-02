@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
-<!-- {% include 'header.html' %}
-this is my home page
-{% include 'footer.html' %} -->
+{% load static %}
 
 
 {% block content %}
 this is my home page
+
+<a href="/about/">About</a>
+
+<a href="/contact/">Contact</a>
+<br> <br>
+<img src="{% static 'images/images.jpg' %}" alt="" height="400px">
 {% endblock %}
