@@ -1,0 +1,12 @@
+{{students}}
+
+{% for student in students %}
+<h1>{{ student | upper }}</h1>
+<h1>{{ student | lower }}</h1>
+<h1>{{ student | title }}</h1>
+<h1>{{ student | length }}</h1>
+<h1>{{ student | truncatechars:5 }}</h1>
+{% empty %}
+<h1> no students found </h1>
+
+{% endfor %}
