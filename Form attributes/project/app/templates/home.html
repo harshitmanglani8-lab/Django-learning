@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Home page</h3>
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Name</label>
+        <input type="text" name="name"> <br><br>
+
+        <label>Email</label>
+        <input type="email" name="email"> <br><br>
+
+        <label>Age</label>
+        <input type="number" name="age"> <br><br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br><br>
+
+        <label>Skills</label>
+        <input type="checkbox" name="skills" value="python">Pythom
+        <input type="checkbox" name="skills" value="django">Django
+        <input type="checkbox" name="skills" value="html">HTML
+        <input type="checkbox" name="skills" value="react">React <br><br>
+
+        <button type="submit" value="submit" >Submit</button>
+
+    </form>
+</body>
+</html>
