@@ -23,4 +23,5 @@ urlpatterns = [
     
     path('add/',Add_Student,name='add'),
     path('details/',Student_details,name='student_details')
+    path('add/',Add_Student,name='add'),
 ]
