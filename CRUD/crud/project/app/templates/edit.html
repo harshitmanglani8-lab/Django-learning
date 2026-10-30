@@ -1,0 +1,15 @@
+edit page 
+
+<h3>Edit Student</h3>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    <input type="text" name="name" value="{{ key.name }}">
+    <input type="text" name="city" value="{{ key.city }}">
+    <input type="text" name="age" value="{{ key.age }}">
+
+    <button type="submit">Update</button>
+    
+</form>

@@ -1,2 +1,17 @@
 This is Form page
 
+<form action="POST">
+    {% csrf_token %}
+
+    <label>name</label>
+    <input type="text" name="name" > <br>
+
+    <label>age</label>
+    <input type="text" name="age" > <br>
+
+    <label>city</label>
+    <input type="text" name="city" > <br>
+
+    <button type="submit">Submit</button>
+
+</form>

@@ -1,3 +1,30 @@
 This is my detail page
 
 <a href="{% url 'add' %}">Add_Student</a>
+
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>ID</th>
+        <th>AGE</th>
+        <th>CITY</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </tr>
+
+    {% for i in key %}
+
+    <tr>
+        <td>{{ i.name }}</td>
+        <td>{{ i.id }}</td>
+        <td>{{ i.age }}</td>
+        <td>{{ i.city }}</td>
+        <td>
+            <a href="{% url 'edit' i.id %}">Edit</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+{{key}}
