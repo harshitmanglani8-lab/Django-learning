@@ -2,10 +2,10 @@ This is my detail page
 
 <a href="{% url 'add' %}">Add_Student</a>
 
-<table>
+<table border="" cellpadding="10" cellspacing="0">
     <tr>
-        <th>NAME</th>
         <th>ID</th>
+        <th>NAME</th>
         <th>AGE</th>
         <th>CITY</th>
         <th>EDIT</th>
@@ -15,16 +15,18 @@ This is my detail page
     {% for i in key %}
 
     <tr>
-        <td>{{ i.name }}</td>
         <td>{{ i.id }}</td>
+        <td>{{ i.name }}</td>
         <td>{{ i.age }}</td>
         <td>{{ i.city }}</td>
         <td>
             <a href="{% url 'edit' i.id %}">Edit</a>
+        </td>
+        <td>
+            <a href="{% url 'delete' i.id %}">Delete</a>
         </td>
     </tr>
 
     {% endfor %}
 
 </table>
-{{key}}

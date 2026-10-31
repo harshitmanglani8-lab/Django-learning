@@ -7,16 +7,16 @@ def Student_details(request):
     students=Student.objects.all()
     return render(request,'details.html',{'key':students})
 
-def Add_Student(request):
+def Add(request):
     if request.method=='POST':
         name=request.POST.get('name')
         age=request.POST.get('age')
         city=request.POST.get('city')
-
+    
         Student.objects.create(
             name=name,
             age=age,
-            city=city
+            city=city,
         )
         return redirect('student_details')
     
@@ -26,10 +26,15 @@ def edit_student(request,id):
     students=Student.objects.get(id=id)
 
     if request.method=='POST':
-            Student.name=request.POST.get('name')
-            Student.age=request.POST.get('age')
-            Student.city=request.POST.get('city')
+            students.name=request.POST.get('name')
+            students.age=request.POST.get('age')
+            students.city=request.POST.get('city')
 
-            Student.save()
+            students.save()
+            return redirect('student_details')
+    return render(request,'edit.html',{'key':students})
 
-    return render(request,'edit.html')
+def delete_student(request,id):
+     students=Student.objects.get(id=id)
+     students.delete()
+     return redirect('student_details')
