@@ -17,4 +17,12 @@ class Registrationform(forms.ModelForm):
             'stu_mobile':forms.NumberInput(attrs={'class':'form-control'}),
             'stu_password':forms.PasswordInput(attrs={'class':'form-control'}),
             }
-        
+
+class Loginform(forms,ModelForm):
+    class Meta:
+        model = Studentmodel
+        fields = ('stu_email',"stu_password")
+        widgets = {
+            'stu_email':forms.EmailInput(attrs={'class':'form-control'}),
+            'stu_password':forms.PasswordInput(attrs={'class':'form-control'}),
+        }
