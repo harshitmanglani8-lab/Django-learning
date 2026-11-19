@@ -9,3 +9,7 @@ class Studentmodel(models.Model):
     stu_mobile= models.CharField()
     stu_password= models.CharField(max_length=25)
 
+class Studentquery(models.Model):
+    stu_name= models.CharField(max_length=50)
+    stu_email= models.EmailField()
+    stu_query= models.TextField()

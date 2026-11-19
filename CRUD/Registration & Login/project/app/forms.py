@@ -1,5 +1,5 @@
 from django import forms
-from .models import Studentmodel
+from .models import Studentmodel , Studentquery
 
 class Registrationform(forms.ModelForm):
     confirm_password= forms.CharField(
@@ -18,11 +18,21 @@ class Registrationform(forms.ModelForm):
             'stu_password':forms.PasswordInput(attrs={'class':'form-control'}),
             }
 
-class Loginform(forms,ModelForm):
+class Loginform(forms.ModelForm):
     class Meta:
         model = Studentmodel
         fields = ('stu_email',"stu_password")
         widgets = {
             'stu_email':forms.EmailInput(attrs={'class':'form-control'}),
             'stu_password':forms.PasswordInput(attrs={'class':'form-control'}),
+        }
+
+class Queryform(forms.ModelForm):
+    class Meta:
+        model = Studentquery
+        fields = ('stu_email',"stu_name","stu_query")
+        widgets= {
+            "stu_email": forms.EmailInput(attrs={"class":"form-control"}),
+            "stu_name": forms.TextInput(attrs={"class":"form-control"}),
+            "stu_query":forms.TextInput(attrs={"class":"form-control"}),
         }
