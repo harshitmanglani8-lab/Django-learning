@@ -70,3 +70,4 @@ def login(request):
             return render(request,'login.html',{'form':form,'msg':msg})
     else:
         return render(request,'login.html',{'form':form})
+
