@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+RAZORPAY_KEY_ID = 'rzp_test_Sq0G4ORGICexGh'
+RAZORPAY_KEY_SECRET = 'bzgT8R2zbk4Athv8IKgvj62Y'
 
 
 # Email
